@@ -1,14 +1,17 @@
-from huggingface_hub import InferenceClient
+import steamlit as st
+from openai import OpenAI
 
-client = InferenceClient(
-	provider="hf-inference",
+client = OpenAI(
+	base_url="https://api-inference.huggingface.co/v1/",
 	api_key="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"
 )
+
+ zapros=st.text_input("Введите запрос", "Напиши сказку про кота")
 
 messages = [
 	{
 		"role": "user",
-		"content": "What is the capital of France?"
+		"content": zapros
 	}
 ]
 
