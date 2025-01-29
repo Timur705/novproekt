@@ -1,10 +1,12 @@
 import streamlit as st
 from openai import OpenAI
+import os 
 
+HugginFace_Token=os.getenv("HugginFace_Token")
 
 client = OpenAI(
 	base_url="https://api-inference.huggingface.co/v1/",
-	api_key="HugginFace_Token"
+	api_key=HugginFace_Token
 )
 
 zapros=st.text_input("Введите запрос", "Напиши сказку про кота")
