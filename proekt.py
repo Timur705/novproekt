@@ -3,7 +3,7 @@ from openai import OpenAI
 
 client = OpenAI(
 	base_url="https://api-inference.huggingface.co/v1/",
-	api_key="hugg_key"
+	api_key="HugginFace_Token"
 )
 
 zapros=st.text_input("Введите запрос", "Напиши сказку про кота")
