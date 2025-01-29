@@ -6,7 +6,7 @@ client = OpenAI(
 	api_key="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"
 )
 
- zapros=st.text_input("Введите запрос", "Напиши сказку про кота")
+zapros=st.text_input("Введите запрос", "Напиши сказку про кота")
 
 messages = [
 	{
